@@ -13,4 +13,30 @@ For detailed information about the project's goals and technical architecture, p
 
 ## Quick Start
 
-*(Coming soon: Instructions for setting up with Docker)*
+### Option 1: Run with Docker (Recommended for RPi)
+1.  Ensure Docker and Docker Compose are installed.
+2.  Run the application:
+    ```bash
+    docker-compose up -d --build
+    ```
+3.  Open your browser to `http://localhost:8501` (or your RPi's IP).
+
+### Option 2: Run Locally (Development)
+1.  Install `uv` (if not installed):
+    ```powershell
+    powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+    ```
+2.  Install dependencies:
+    ```bash
+    uv pip install -r requirements.txt
+    ```
+3.  Run the app:
+    ```bash
+    uv run streamlit run src/main.py
+    ```
+
+## Features
+*   **Daily Automation**: Fetches data automatically at 14:30 (Asia/Taipei).
+*   **Trend Analysis**: Find stocks rising for N consecutive days.
+*   **Resilient**: Retries on failure, stores data in SQLite.
+

@@ -1,0 +1,7 @@
+streamlit
+twstock
+sqlmodel
+apscheduler
+pandas
+pytest
+lxml

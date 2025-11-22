@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  twstock-app:
+    build: .
+    container_name: twstock-app
+    restart: always
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - TZ=Asia/Taipei
